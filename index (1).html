@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URU Academy — E-Commerce Specialist Pipeline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+
+  <!-- SIDEBAR NAV -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-mark">U</div>
+      <div>
+        <div class="brand-name">URU Academy</div>
+        <div class="brand-sub">E-Commerce Specialist</div>
+      </div>
+    </div>
+
+    <div class="sidebar-progress">
+      <div class="progress-track">
+        <div class="progress-fill" id="globalProgress"></div>
+      </div>
+      <span class="progress-label" id="progressLabel">0% selesai</span>
+    </div>
+
+    <div class="nav-section-label">KURIKULUM</div>
+    <ul class="nav-list">
+      <li><a href="#hero" class="nav-link active" data-tab="hero"><span class="nav-num">00</span>Overview</a></li>
+      <li><a href="#day1" class="nav-link" data-tab="day1"><span class="nav-num">01</span>Hari 1 — Foundation</a></li>
+      <li><a href="#day2" class="nav-link" data-tab="day2"><span class="nav-num">02</span>Hari 2 — Optimization</a></li>
+      <li><a href="#day3" class="nav-link" data-tab="day3"><span class="nav-num">03</span>Hari 3 — Advanced</a></li>
+      <li><a href="#kpi" class="nav-link" data-tab="kpi"><span class="nav-num">04</span>KPI & Checklist</a></li>
+    </ul>
+
+    <div class="nav-section-label">TOOLS</div>
+    <ul class="nav-list">
+      <li><a href="#notes" class="nav-link" data-tab="notes"><span class="nav-num">↗</span>Catatan Saya</a></li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <div class="brand-label">Brand Sample</div>
+      <div class="brand-tag">URU Underwear — Celana Dalam Wanita</div>
+    </div>
+  </nav>
+
+  <!-- MOBILE HEADER -->
+  <header class="mobile-header">
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-brand">URU Academy</div>
+    <div class="mobile-prog" id="mobileProgLabel">0%</div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main" id="main">
+
+    <!-- HERO / OVERVIEW -->
+    <section class="page active" id="page-hero">
+      <div class="hero-section">
+        <div class="hero-eyebrow">3-Hari Intensive Pipeline</div>
+        <h1 class="hero-title">Menjadi<br><em>E-Commerce</em><br>Specialist</h1>
+        <p class="hero-desc">Dari basic hingga advance — kuasai 7 kompetensi utama di Shopee, Tokopedia & TikTok Shop menggunakan brand sample <strong>URU Underwear</strong>.</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">7</div>
+            <div class="stat-label">Kompetensi</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">9</div>
+            <div class="stat-label">Modul</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">3</div>
+            <div class="stat-label">Platform</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">24h</div>
+            <div class="stat-label">Total Belajar</div>
+          </div>
+        </div>
+        <button class="cta-btn" onclick="navigate('day1')">Mulai Hari 1 →</button>
+      </div>
+
+      <div class="overview-cards">
+        <div class="overview-card" onclick="navigate('day1')">
+          <div class="ov-day">Hari 1</div>
+          <div class="ov-title">Foundation</div>
+          <div class="ov-desc">Visual standar, setup listing, input data produk lengkap</div>
+          <div class="ov-modules">3 modul · 7 jam</div>
+          <div class="ov-tasks">Tugas 1 · 2 · 6</div>
+        </div>
+        <div class="overview-card" onclick="navigate('day2')">
+          <div class="ov-day">Hari 2</div>
+          <div class="ov-title">Optimization</div>
+          <div class="ov-desc">SEO listing, monitoring performa, koordinasi tim</div>
+          <div class="ov-modules">3 modul · 7 jam</div>
+          <div class="ov-tasks">Tugas 3 · 4 · 5</div>
+        </div>
+        <div class="overview-card" onclick="navigate('day3')">
+          <div class="ov-day">Hari 3</div>
+          <div class="ov-title">Advanced Ops</div>
+          <div class="ov-desc">Campaign, flash sale, iklan berbayar & skalasi bisnis</div>
+          <div class="ov-modules">3 modul · 10 jam</div>
+          <div class="ov-tasks">Tugas 7</div>
+        </div>
+      </div>
+
+      <div class="competency-grid">
+        <div class="comp-header">7 Kompetensi Wajib E-Commerce Specialist URU</div>
+        <div class="comp-list">
+          <div class="comp-item"><span class="comp-num">01</span><span>Seleksi & kurasi foto produk terbaik</span></div>
+          <div class="comp-item"><span class="comp-num">02</span><span>Presentasi visual untuk konversi</span></div>
+          <div class="comp-item"><span class="comp-num">03</span><span>Monitor performa — views, klik, konversi</span></div>
+          <div class="comp-item"><span class="comp-num">04</span><span>Optimasi judul, deskripsi, keyword & kategori</span></div>
+          <div class="comp-item"><span class="comp-num">05</span><span>Koordinasi dengan tim desain & marketing</span></div>
+          <div class="comp-item"><span class="comp-num">06</span><span>Akurasi info produk — harga, stok, promo, bundle</span></div>
+          <div class="comp-item"><span class="comp-num">07</span><span>Support campaign & setup promosi marketplace</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DAY 1 -->
+    <section class="page" id="page-day1">
+      <div class="page-header">
+        <div class="page-day-badge d1">Hari 1</div>
+        <h2 class="page-title">Foundation</h2>
+        <p class="page-subtitle">Visual, Listing & Platform Setup · Tugas 1, 2, 6 · Shopee · Tokopedia · TikTok Shop</p>
+        <div class="page-progress-bar"><div class="page-prog-fill d1-fill" id="d1Progress" style="width:0%"></div></div>
+      </div>
+
+      <!-- MODULE 1 -->
+      <div class="module-card" data-module="m1">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-icon" style="background:#dcfce7;color:#166534">📸</div>
+          <div class="module-info">
+            <div class="module-title">Modul 1 — Standar Foto Produk URU</div>
+            <div class="module-meta">⏱ 09.00–11.00 · 2 jam · Tugas 1 & 2</div>
+          </div>
+          <div class="module-status" id="status-m1">
+            <div class="check-circle" id="check-m1"></div>
+            <span class="chevron">›</span>
+          </div>
+        </div>
+        <div class="module-body">
+          <div class="content-block">
+            <div class="block-label">Standar Brand URU</div>
+            <div class="step-list">
+              <div class="step-item">
+                <span class="step-dot"></span>
+                <p>URU adalah brand underwear wanita → tone visual harus: <strong>clean, feminine, confident</strong>. Background wajib putih (#FFFFFF) atau soft nude untuk hero image.</p>
+              </div>
+              <div class="step-item">
+                <span class="step-dot"></span>
+                <p>Jumlah foto wajib per listing: <code>Shopee min 3</code>, <code>Tokopedia min 4</code>, <code>TikTok Shop min 3</code> + video produk sangat dianjurkan.</p>
+              </div>
+              <div class="step-item">
+                <span class="step-dot"></span>
+                <p>Resolusi minimum: 500×500px, dianjurkan <strong>1000×1000px</strong> (square) untuk semua platform. TikTok Shop support 9:16 untuk feed vertical.</p>
+              </div>
+              <div class="step-item">
+                <span class="step-dot"></span>
+                <p>Brand color URU: gunakan aksen warna yang konsisten di semua secondary image (infografis, detail, size chart).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block">
+            <div class="block-label">6 Jenis Foto Wajib per SKU</div>
+            <div class="photo-grid">
+              <div class="photo-card">
+                <div class="photo-icon">🖼</div>
+                <div class="photo-type">Hero Image</div>
+                <div class="photo-desc">Produk utama, full view on white/nude bg, no text overlay</div>
+              </div>
+              <div class="photo-card">
+                <div class="photo-icon">🔍</div>
+                <div class="photo-type">Detail Shot</div>
+                <div class="photo-desc">Close-up bahan, jahitan, elastis, label brand URU</div>
+              </div>
+              <div class="photo-card">
+                <div class="photo-icon">👗</div>
+                <div class="photo-type">Lifestyle Shot</div>
+                <div class="photo-desc">Model pakai produk, angle sopan & elegan</div>
+              </div>
+              <div class="photo-card">
+                <div class="photo-icon">📏</div>
+                <div class="photo-type">Size Chart</div>
+                <div class="photo-desc">Infografis S/M/L/XL/XXL dengan cm pinggang & pinggul</div>
+              </div>
+              <div class="photo-card">
+                <div class="photo-icon">✨</div>
+                <div class="photo-type">Benefit Image</div>
+                <div class="photo-desc">Highlight USP: anti-iritasi, breathable, seamless, cotton</div>
+              </div>
+              <div class="photo-card">
+                <div class="photo-icon">📦</div>
+                <div class="photo-type">Packaging Shot</div>
+                <div class="photo-desc">Foto kemasan URU untuk trust & unboxing experience</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tip-block">
+            <div class="tip-header">💡 Pro Tips</div>
+            <ul class="tip-list">
+              <li>Gunakan Canva/Adobe Express untuk resize batch foto ke semua ukuran platform sekaligus.</li>
+              <li>Shopee punya fitur "foto AI enhancement" di Seller Center → manfaatkan untuk auto-brightness.</li>
+              <li>Foto lingerie/underwear di Tokopedia: hindari foto terlalu eksplisit karena bisa kena moderasi konten.</li>
+              <li>TikTok Shop: upload video 15–30 detik show produk (lipat, texture, stretch) → CTR naik signifikan.</li>
+            </ul>
+          </div>
+
+          <div class="task-block">
+            <div class="task-header">📋 Tugas Praktik</div>
+            <p>Ambil 1 SKU produk URU (misal: Celana Dalam Wanita Cotton Seamless). Siapkan 6 foto sesuai urutan di atas. Upload ke Shopee Seller Center → Produk → Edit Listing → cek apakah semua foto lolos moderasi platform.</p>
+            <label class="task-done-label"><input type="checkbox" class="task-check" data-module="m1" onchange="updateProgress()"> Tugas ini sudah selesai</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 2 -->
+      <div class="module-card" data-module="m2">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-icon" style="background:#ede9fe;color:#5b21b6">🏪</div>
+          <div class="module-info">
+            <div class="module-title">Modul 2 — Setup Akun & Navigasi Seller Center</div>
+            <div class="module-meta">⏱ 11.00–13.00 · 2 jam · Platform Overview</div>
+          </div>
+          <div class="module-status" id="status-m2">
+            <div class="check-circle" id="check-m2"></div>
+            <span class="chevron">›</span>
+          </div>
+        </div>
+        <div class="module-body">
+          <div class="content-block">
+            <div class="block-label">Navigasi 3 Platform Utama</div>
+            <div class="platform-cards">
+              <div class="platform-card shopee">
+                <div class="plat-icon">🟠</div>
+                <div class="plat-name">Shopee Seller Center</div>
+                <div class="plat-url">seller.shopee.co.id</div>
+                <div class="plat-menu">Produk Saya · Tambah Produk · Pesanan · Promosi · Iklan · Analitik</div>
+              </div>
+              <div class="platform-card tokped">
+                <div class="plat-icon">🟢</div>
+                <div class="plat-name">Tokopedia Seller</div>
+                <div class="plat-url">seller.tokopedia.com</div>
+                <div class="plat-menu">Kelola Produk · Power Merchant · TopAds · Statistik Toko</div>
+              </div>
+              <div class="platform-card tiktok">
+                <div class="plat-icon">⚫</div>
+                <div class="plat-name">TikTok Shop Seller</div>
+                <div class="plat-url">seller-id.tiktok.com</div>
+                <div class="plat-menu">Product · Order · Marketing · Live · Analytics · Creator Center</div>
+              </div>
+            </div>
+          </div>
+          <div class="content-block">
+            <div class="block-label">Struktur Toko URU yang Benar</div>
+            <div class="step-list">
+              <div class="step-item"><span class="step-dot"></span><p>Buat kategori koleksi: <code>Celana Dalam Harian</code> · <code>Seamless Series</code> · <code>Sport Collection</code> · <code>Bundle Pack</code></p></div>
+              <div class="step-item"><span class="step-dot"></span><p>Setup nama toko konsisten: <strong>"URU Official"</strong> di semua platform untuk brand consistency.</p></div>
+              <div class="step-item"><span class="step-dot"></span><p>Banner toko & foto profil: pakai aset visual brand URU yang sama di semua marketplace.</p></div>
+            </div>
+          </div>
+          <div class="task-block">
+            <div class="task-header">📋 Tugas Praktik</div>
+            <p>Login ke masing-masing Seller Center. Screenshot dashboard utama ketiga platform. Bandingkan: fitur apa yang ada di Shopee tapi tidak ada di TikTok Shop? Catat di doc.</p>
+            <label class="task-done-label"><input type="checkbox" class="task-check" data-module="m2" onchange="updateProgress()"> Tugas ini sudah selesai</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 3 -->
+      <div class="module-card" data-module="m3">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-icon" style="background:#fce7f3;color:#9d174d">📝</div>
+          <div class="module-info">
+            <div class="module-title">Modul 3 — Input Listing Produk Lengkap</div>
+            <div class="module-meta">⏱ 14.00–17.00 · 3 jam · Tugas 6</div>
+          </div>
+          <div class="module-status" id="status-m3">
+            <div class="check-circle" id="check-m3"></div>
+            <span class="chevron">›</span>
+          </div>
+        </div>
+        <div class="module-body">
+          <div class="content-block">
+            <div class="block-label">Field Wajib Diisi dengan Benar</div>
+            <div class="step-list">
+              <div class="step-item"><span class="step-dot"></span><p><strong>Nama Produk</strong> — Formula: [Brand] + [Tipe] + [Material] + [Benefit] + [Ukuran]. Contoh: <code>"URU Celana Dalam Wanita Seamless Cotton Anti-Iritasi Breathable"</code></p></div>
+              <div class="step-item"><span class="step-dot"></span><p><strong>Kategori</strong> — Pilih paling spesifik: Pakaian Dalam Wanita → Celana Dalam. Kategori tepat = SEO organik lebih baik.</p></div>
+              <div class="step-item"><span class="step-dot"></span><p><strong>Harga & Stok</strong> — Input per varian (S/M/L/XL/XXL). Set stok real-time. Aktifkan pre-order jika stok kosong.</p></div>
+              <div class="step-item"><span class="step-dot"></span><p><strong>Berat & Dimensi</strong> — Celana dalam URU ±80–120 gram. Dimensi kemasan penting untuk kalkulasi ongkir akurat.</p></div>
+              <div class="step-item"><span class="step-dot"></span><p><strong>Varian Warna</strong> — Tambah varian warna dengan foto masing-masing. Jangan pakai 1 foto untuk semua warna.</p></div>
+            </div>
+          </div>
+          <div class="tip-block">
+            <div class="tip-header">💡 Trik Akurasi Data</div>
+            <ul class="tip-list">
+              <li>Gunakan spreadsheet master (Google Sheet) untuk manage semua data produk URU sebelum input ke platform.</li>
+              <li>Kolom wajib di master sheet: SKU, Nama Produk, Harga Normal, Harga Promo, Stok, Berat, Warna, Ukuran, Status Aktif.</li>
+              <li>Sinkronisasi stok: jika jual di 3 platform, kurangi stok manual atau pakai tools OMS (Ginee, Jubelio, dll).</li>
+            </ul>
+          </div>
+          <div class="task-block">
+            <div class="task-header">📋 Tugas Praktik</div>
+            <p>Buat master spreadsheet untuk 5 SKU produk URU. Input semua field di atas. Lalu upload/edit 1 listing di Shopee dengan data dari spreadsheet tersebut. Verifikasi: apakah harga, stok, dan varian sudah benar tampil di halaman produk?</p>
+            <label class="task-done-label"><input type="checkbox" class="task-check" data-module="m3" onchange="updateProgress()"> Tugas ini sudah selesai</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-nav">
+        <button class="day-btn" onclick="navigate('hero')">← Overview</button>
+        <button class="day-btn primary" onclick="navigate('day2')">Lanjut Hari 2 →</button>
+      </div>
+    </section>
+
+    <!-- DAY 2 -->
+    <section class="page" id="page-day2">
+      <div class="page-header">
+        <div class="page-day-badge d2">Hari 2</div>
+        <h2 class="page-title">Optimization</h2>
+        <p class="page-subtitle">SEO, Monitoring & Koordinasi Tim · Tugas 3, 4, 5</p>
+        <div class="page-progress-bar"><div class="page-prog-fill d2-fill" id="d2Progress" style="width:0%"></div></div>
+      </div>
+
+      <!-- MODULE 4 -->
+      <div class="module-card" data-module="m4">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-icon" style="background:#ede9fe;color:#5b21b6">🔍</div>
+          <div class="module-info">
+            <div class="module-title">Modul 4 — SEO Listing: Judul, Deskripsi & Keyword</div>
+            <div class="module-meta">⏱ 09.00–12.00 · 3 jam · Tugas 4</div>
+          </div>
+          <div class="module-status" id="status-m4">
+            <div class="check-circle" id="check-m4"></div>
+            <span class="chevron">›</span>
+          </div>
+        </div>
+        <div class="module-body">
+          <div class="content-block">
+            <div class="block-label">Riset Keyword URU</div>
+            <div class="step-list">
+              <div class="step-item"><span class="step-dot"></span><p><strong>Tools gratis:</strong> Shopee Search Bar (autocomplete), Tokopedia Search, TikTok Search → ketik "celana dalam wanita" → lihat saran keyword otomatis.</p></div>
+              <div class="step-item"><span class="step-dot"></span><p><strong>Tools berbayar/freemium:</strong> Seller Research (Shopee), Instant Search (Tokopedia), Kalodata/Shoplus (TikTok Shop analytics).</p></div>
+            </div>
+            <div class="keyword-grid">
+              <div class="kw-section">
+                <div class="kw-label">Keyword Primer</div>
+                <div class="kw-tags">
+                  <span class="kw-tag primary">celana dalam wanita</span>
+                  <span class="kw-tag primary">celana dalam cotton</span>
+                  <span class="kw-tag primary">celana dalam seamless</span>
+                  <span class="kw-tag primary">pakaian dalam wanita</span>
+                  <span class="kw-tag primary">celana dalam anti iritasi</span>
+                </div>
+              </div>
+              <div class="kw-section">
+                <div class="kw-label">Keyword Long-tail</div>
+                <div class="kw-tags">
+                  <span class="kw-tag secondary">celana dalam wanita dewasa adem</span>
+                  <span class="kw-tag secondary">CD wanita seamless tidak berbekas</span>
+                  <span class="kw-tag secondary">underwear wanita cotton combed</span>
+                  <span class="kw-tag secondary">celana dalam basic wanita 5 pcs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block">
+            <div class="block-label">Formula Judul per Platform</div>
+            <div class="title-examples">
+              <div class="title-example shopee-ex">
+                <div class="title-plat">🟠 Shopee <span>(max 100 karakter)</span></div>
+                <div class="title-text">"Celana Dalam Wanita Seamless URU Breathable Cotton Anti Iritasi All Size"</div>
+                <div class="title-tip">Letakkan keyword utama di awal judul</div>
+              </div>
+              <div class="title-example tokped-ex">
+                <div class="title-plat">🟢 Tokopedia <span>(max 70 karakter)</span></div>
+                <div class="title-text">"URU Celana Dalam Seamless Wanita Anti Iritasi Adem"</div>
+                <div class="title-tip">Lebih singkat dan padat</div>
+              </div>
+              <div class="title-example tiktok-ex">
+                <div class="title-plat">⚫ TikTok Shop <span>(max 255 karakter)</span></div>
+                <div class="title-text">"URU Celana Dalam Wanita Seamless Premium — Adem, Anti Iritasi, No Panty Line, Cotton Combed — S M L XL XXL"</div>
+                <div class="title-tip">Bisa lebih deskriptif, sisipkan benefit & hook</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block">
+            <div class="block-label">Struktur Deskripsi Produk URU</div>
+            <div class="desc-structure">
+              <div class="desc-step"><span class="desc-num">1</span><div><strong>Hook (2 kalimat)</strong> — Rasakan kenyamanan seharian penuh bersama URU Seamless Underwear — dirancang khusus untuk wanita aktif Indonesia.</div></div>
+              <div class="desc-step"><span class="desc-num">2</span><div><strong>Benefit bullet (5–7 poin)</strong> — ✓ Cotton combed 40s ✓ Anti-iritasi ✓ Seamless no panty line ✓ Elastis awet ✓ Harian & olahraga ✓ S–XXL</div></div>
+              <div class="desc-step"><span class="desc-num">3</span><div><strong>Detail produk</strong> — Material, ukuran, warna, care label, berat produk.</div></div>
+              <div class="desc-step"><span class="desc-num">4</span><div><strong>Panduan size</strong> — Tabel S/M/L/XL/XXL dengan cm lingkar pinggang & pinggul.</div></div>
+              <div class="desc-step"><span class="desc-num">5</span><div><strong>CTA + info toko</strong> — "Pesan sekarang & dapatkan gratis ongkir. CS siap membantu 09.00–21.00."</div></div>
+            </div>
+          </div>
+
+          <div class="tip-block">
+            <div class="tip-header">💡 Trik SEO Marketplace</div>
+            <ul class="tip-list">
+              <li>Shopee punya <strong>kolom keyword khusus</strong> di halaman edit produk — isi 10 keyword berbeda, jangan duplikasi dari judul.</li>
+              <li>Tokopedia: gunakan fitur "Etalase" untuk grouping produk → meningkatkan navigasi & ranking toko.</li>
+              <li>TikTok Shop: keyword di deskripsi lebih berpengaruh untuk FYP feed daripada title.</li>
+              <li>Update listing setiap 2 minggu (edit minor) → sistem anggap listing aktif → ranking naik.</li>
+            </ul>
+          </div>
+
+          <div class="task-block">
+            <div class="task-header">📋 Tugas Praktik</div>
+            <p>Riset 15 keyword untuk URU menggunakan Shopee & Tokopedia autocomplete. Buat 3 versi judul produk (Shopee/Tokopedia/TikTok). Tulis 1 deskripsi lengkap untuk celana dalam seamless URU dan apply ke listing Shopee.</p>
+            <label class="task-done-label"><input type="checkbox" class="task-check" data-module="m4" onchange="updateProgress()"> Tugas ini sudah selesai</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 5 -->
+      <div class="module-card" data-module="m5">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-icon" style="background:#dcfce7;color:#166534">📊</div>
+          <div class="module-info">
+            <div class="module-title">Modul 5 — Monitor Performa Produk</div>
+            <div class="module-meta">⏱ 13.00–15.00 · 2 jam · Tugas 3</div>
+          </div>
+          <div class="module-status" id="status-m5">
+            <div class="check-circle" id="check-m5"></div>
+            <span class="chevron">›</span>
+          </div>
+        </div>
+        <div class="module-body">
+          <div class="content-block">
+            <div class="block-label">Metrik Utama yang Harus Dipantau Harian</div>
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <div class="metric-icon">👁</div>
+                <div class="metric-name">Views / Impressi</div>
+                <div class="metric-benchmark">Jika rendah → masalah SEO atau iklan</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">🖱</div>
+                <div class="metric-name">CTR</div>
+                <div class="metric-val">Target &gt;2–5%</div>
+                <div class="metric-benchmark">Jika rendah → masalah foto atau harga</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">🛒</div>
+                <div class="metric-name">Conversion Rate</div>
+                <div class="metric-val">Target 1–3%</div>
+                <div class="metric-benchmark">Jika rendah → masalah deskripsi atau review</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">⭐</div>
+                <div class="metric-name">Rating & Review</div>
+                <div class="metric-val">Target &gt;4.5</div>
+                <div class="metric-benchmark">Respons review negatif dalam 24 jam</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-icon">🔄</div>
+                <div class="metric-name">Repeat Purchase</div>
+                <div class="metric-benchmark">Underwear = repurchase tinggi, pantau terus</div>
+              </div>
+            </div>
+          </div>
+          <div class="tip-block">
+            <div class="tip-header">💡 Trik Monitoring Efisien</div>
+            <ul class="tip-list">
+              <li>Buat template Google Sheet "Dashboard Harian URU": kolom Views, CTR, CR, Orders, Revenue per platform per hari.</li>
+              <li>Set reminder setiap Senin pagi untuk weekly review performa.</li>
+              <li>Jika 1 produk views turun &gt;30% dalam seminggu → segera cek kompetitor baru atau perubahan algoritma.</li>
+            </ul>
+          </div>
+          <div class="task-block">
+            <div class="task-header">📋 Tugas Praktik</div>
+            <p>Buat template dashboard monitoring di Google Sheets. Isi data performa 5 SKU URU dari Shopee Analitik untuk periode 30 hari terakhir. Identifikasi 1 produk dengan CTR terendah dan analisis kemungkinan penyebabnya.</p>
+            <label class="task-done-label"><input type="checkbox" class="task-check" data-module="m5" onchange="updateProgress()"> Tugas ini sudah selesai</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 6 -->
+      <div class="module-card" data-module="m6">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-icon" style="background:#fce7f3;color:#9d174d">🤝</div>
+          <div class="module-info">
+            <div class="module-title">Modul 6 — Koordinasi Tim Desain & Marketing</div>
+            <div class="module-meta">⏱ 15.00–17.00 · 2 jam · Tugas 5</div>
+          </div>
+          <div class="module-status" id="status-m6">
+            <div class="check-circle" id="check-m6"></div>
+            <span class="chevron">›</span>
+          </div>
+        </div>
+        <div class="module-body">
+          <div class="content-block">
+            <div class="block-label">SOP Permintaan Aset Visual ke Tim Desain</div>
+            <div class="step-list">
+              <div class="step-item"><span class="step-dot"></span><p><strong>Brief request wajib berisi:</strong> nama campaign, ukuran file (per platform), deadline, tone/mood, warna brand URU, referensi visual.</p></div>
+              <div class="step-item"><span class="step-dot"></span><p><strong>Ukuran banner standar:</strong> Shopee (1200×400px), Tokopedia (1160×360px), TikTok Shop (1080×1080px atau 1080×1920px).</p></div>
+              <div class="step-item"><span class="step-dot"></span><p><strong>Tools kolaborasi:</strong> Notion/Trello untuk tracking request desain. Status: Brief → In Progress → Review → Done.</p></div>
+              <div class="step-item"><span class="step-dot"></span><p><strong>Lead time:</strong> minimal 5 hari kerja sebelum campaign. Untuk harnas besar (11.11, Harbolnas) minimal 2 minggu.</p></div>
+            </div>
+          </div>
+          <div class="tip-block">
+            <div class="tip-header">💡 Trik Koordinasi Efektif</div>
+            <ul class="tip-list">
+              <li>Buat "Brand Asset Folder" di Google Drive untuk URU: pisah folder per platform & per campaign.</li>
+              <li>Gunakan template brief standar → hemat waktu revisi dengan tim desain.</li>
+              <li>Review aset dari desainer SEBELUM upload: cek ukuran, resolusi, tulisan tidak terpotong di thumbnail.</li>
+            </ul>
+          </div>
+          <div class="task-block">
+            <div class="task-header">📋 Tugas Praktik</div>
+            <p>Buat template brief desain standar URU di Google Docs. Isi untuk 1 campaign fiktif (misalnya: "Kampanye Lebaran URU — April"). Share ke folder tim.</p>
+            <label class="task-done-label"><input type="checkbox" class="task-check" data-module="m6" onchange="updateProgress()"> Tugas ini sudah selesai</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-nav">
+        <button class="day-btn" onclick="navigate('day1')">← Hari 1</button>
+        <button class="day-btn primary" onclick="navigate('day3')">Lanjut Hari 3 →</button>
+      </div>
+    </section>
+
+    <!-- DAY 3 -->
+    <section class="page" id="page-day3">
+      <div class="page-header">
+        <div class="page-day-badge d3">Hari 3</div>
+        <h2 class="page-title">Advanced Ops</h2>
+        <p class="page-subtitle">Campaign, Flash Sale, Iklan Berbayar & Skalasi · Tugas 7</p>
+        <div class="page-progress-bar"><div class="page-prog-fill d3-fill" id="d3Progress" style="width:0%"></div></div>
+      </div>
+
+      <!-- MODULE 7 -->
+      <div class="module-card" data-module="m7">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-icon" style="background:#fce7f3;color:#9d174d">🎪</div>
+          <div class="module-info">
+            <div class="module-title">Modul 7 — Setup Campaign & Flash Sale</div>
+            <div class="module-meta">⏱ 09.00–12.00 · 3 jam · Tugas 7</div>
+          </div>
+          <div class="module-status" id="status-m7">
+            <div class="check-circle" id="check-m7"></div>
+            <span class="chevron">›</span>
+          </div>
+        </div>
+        <div class="module-body">
+          <div class="content-block">
+            <div class="block-label">Jenis Campaign per Platform</div>
+            <div class="campaign-table">
+              <div class="ct-row header">
+                <div>Platform</div><div>Campaign Tersedia</div>
+              </div>
+              <div class="ct-row">
+                <div><span class="plat-badge shopee-b">Shopee</span></div>
+                <div>Flash Sale Toko, Shopee Flash Sale, Voucher Toko, Bundling, Cashback Koin, Gratis Ongkir Xtra</div>
+              </div>
+              <div class="ct-row">
+                <div><span class="plat-badge tokped-b">Tokopedia</span></div>
+                <div>Flash Sale Toko, Tokopedia Sale Events, Kupon Toko, OVO Points, Power Merchant promos</div>
+              </div>
+              <div class="ct-row">
+                <div><span class="plat-badge tiktok-b">TikTok Shop</span></div>
+                <div>Campaign Promo, Flash Deal, Bundle Deal, Affiliate Campaign, LIVE Shopping promo, Creator Gifting</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-block">
+            <div class="block-label">Setup Flash Sale URU di Shopee (Step-by-Step)</div>
+            <div class="step-list numbered">
+              <div class="step-item"><span class="step-num">1</span><p>Shopee Seller Center → Promosi → Flash Sale Toko → Buat Baru.</p></div>
+              <div class="step-item"><span class="step-num">2</span><p>Pilih waktu flash sale (1–24 jam). Peak jam: <code>12.00–14.00</code> atau <code>20.00–22.00</code>.</p></div>
+              <div class="step-item"><span class="step-num">3</span><p>Pilih produk URU: minimum discount <strong>20%</strong> untuk muncul di banner flash sale. Set kuota stok flash sale.</p></div>
+              <div class="step-item"><span class="step-num">4</span><p>Upload banner flash sale (1200×400px) dengan visual eye-catching. Cantumkan % diskon besar di banner.</p></div>
+              <div class="step-item"><span class="step-num">5</span><p>Aktifkan notif ke followers toko 1 jam sebelum flash sale via fitur "Notifikasi Toko".</p></div>
+            </div>
+          </div>
+
+          <div class="content-block">
+            <div class="block-label">Strategi Bundle URU</div>
+            <div class="bundle-cards">
+              <div class="bundle-card">
+                <div class="bundle-icon">📦</div>
+                <div class="bundle-name">Bundle 3 Pcs</div>
+                <div class="bundle-desc">3 celana dalam pilihan warna, harga bundle lebih hemat 15–20%. Naikkan AOV (Average Order Value).</div>
+              </div>
+              <div class="bundle-card">
+                <div class="bundle-icon">🎁</div>
+                <div class="bundle-name">Bundle Mix</div>
+                <div class="bundle-desc">Paket seamless + sport + basic. Target customer yang mau koleksi lengkap URU.</div>
+              </div>
+              <div class="bundle-card">
+                <div class="bundle-icon">✨</div>
+                <div class="bundle-name">Bundle + Gift</div>
+                <div class="bundle-desc">Beli 5 pcs, gratis 1 pcs atau free gift (laundry bag, pouch branded URU).</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tip-block">
+            <div class="tip-header">💡 Trik Campaign Advance</div>
+            <ul class="tip-list">
+              <li>Daftar Shopee Flash Sale Platform (bukan toko) via Seller Center → Marketing → Flash Sale — butuh rating toko &gt;4.5 & performa pengiriman baik.</li>
+              <li>TikTok Shop LIVE + Flash Deal: kombinasi paling powerful untuk underwear → model pakai produk LIVE + flash deal real-time = konversi tinggi.</li>
+              <li>Siapkan stok buffer sebelum campaign besar — jangan sampai kehabisan stok di jam peak promo.</li>
+              <li>Pantau dashboard real-time selama flash sale — jika stok hampir habis, segera tambah atau matikan promo.</li>
+            </ul>
+          </div>
+
+          <div class="task-block">
+            <div class="task-header">📋 Tugas Praktik</div>
+            <p>Setup 1 Flash Sale Toko di Shopee untuk 2 SKU URU. Buat 1 bundle "URU 3-Pack" di Tokopedia. Rencanakan outline konten TikTok Shop LIVE sederhana (15 menit) untuk flash deal celana dalam URU.</p>
+            <label class="task-done-label"><input type="checkbox" class="task-check" data-module="m7" onchange="updateProgress()"> Tugas ini sudah selesai</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 8 -->
+      <div class="module-card" data-module="m8">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-icon" style="background:#dcfce7;color:#166534">📢</div>
+          <div class="module-info">
+            <div class="module-title">Modul 8 — Iklan Berbayar (Shopee Ads, TopAds, TikTok Affiliate)</div>
+            <div class="module-meta">⏱ 13.00–16.00 · 3 jam · Advanced Visibility</div>
+          </div>
+          <div class="module-status" id="status-m8">
+            <div class="check-circle" id="check-m8"></div>
+            <span class="chevron">›</span>
+          </div>
+        </div>
+        <div class="module-body">
+          <div class="content-block">
+            <div class="block-label">Shopee Ads — Mulai dari Nol</div>
+            <div class="step-list">
+              <div class="step-item"><span class="step-dot"></span><p><strong>Tipe iklan:</strong> Iklan Pencarian (muncul di hasil search keyword) & Iklan Discovery (muncul di feed, recommended, flash sale page).</p></div>
+              <div class="step-item"><span class="step-dot"></span><p><strong>Setup:</strong> Seller Center → Iklan → Buat Kampanye → pilih produk URU → pilih keyword → set budget harian (min Rp10.000).</p></div>
+              <div class="step-item"><span class="step-dot"></span><p><strong>Strategi keyword iklan URU:</strong> bid tinggi di "celana dalam wanita seamless" & "underwear wanita cotton" karena volume & intent beli tinggi.</p></div>
+              <div class="step-item"><span class="step-dot"></span><p><strong>Pantau ROAS</strong> (Return on Ad Spend). Target sehat: <code>ROAS &gt; 3x</code>. Jika &lt;2x, cek ulang foto, harga, atau keyword.</p></div>
+            </div>
+          </div>
+          <div class="content-block">
+            <div class="block-label">TikTok Shop Affiliate (Gratis tapi Powerful)</div>
+            <div class="step-list">
+              <div class="step-item"><span class="step-dot"></span><p><strong>Open Collaboration:</strong> Seller Center → Marketing → Affiliate → set komisi % untuk creator yang mau promote produk URU.</p></div>
+              <div class="step-item"><span class="step-dot"></span><p><strong>Targeted Collaboration:</strong> Cari creator niche fashion/lifestyle → kirim sample + tawaran komisi khusus.</p></div>
+              <div class="step-item"><span class="step-dot"></span><p><strong>Komisi typical:</strong> 10–25% untuk fashion. URU bisa start di <code>15%</code> untuk menarik creator berkualitas.</p></div>
+            </div>
+          </div>
+          <div class="tip-block">
+            <div class="tip-header">💡 Trik Iklan Advance</div>
+            <ul class="tip-list">
+              <li><strong>Retargeting:</strong> Shopee Ads punya opsi target "yang pernah lihat toko saya" → remarketing ke warm audience yang sudah kenal URU.</li>
+              <li>Matikan iklan produk yang tidak performan setelah 7 hari (ROAS &lt; 1.5x) — alihkan budget ke best-seller URU.</li>
+              <li>TikTok: creator micro (10k–100k followers) sering punya engagement lebih tinggi untuk produk fashion intimates.</li>
+              <li>Mulai dengan budget kecil (Rp30.000–50.000/hari per platform) → optimasi dulu → baru scale budget.</li>
+            </ul>
+          </div>
+          <div class="task-block">
+            <div class="task-header">📋 Tugas Praktik</div>
+            <p>Setup 1 kampanye Shopee Ads untuk produk URU best-seller dengan budget Rp50.000/hari. Cari 3 creator TikTok niche fashion underwear dan kirim request kolaborasi affiliate via TikTok Shop Seller Center.</p>
+            <label class="task-done-label"><input type="checkbox" class="task-check" data-module="m8" onchange="updateProgress()"> Tugas ini sudah selesai</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODULE 9 -->
+      <div class="module-card" data-module="m9">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-icon" style="background:#ede9fe;color:#5b21b6">🚀</div>
+          <div class="module-info">
+            <div class="module-title">Modul 9 — SOP Mingguan & Final Project</div>
+            <div class="module-meta">⏱ 16.00–17.00 · 1 jam · Wrap-Up</div>
+          </div>
+          <div class="module-status" id="status-m9">
+            <div class="check-circle" id="check-m9"></div>
+            <span class="chevron">›</span>
+          </div>
+        </div>
+        <div class="module-body">
+          <div class="content-block">
+            <div class="block-label">SOP Kerja Mingguan E-Commerce Specialist URU</div>
+            <div class="weekly-sop">
+              <div class="sop-day"><span class="sop-label">Sen</span><div><strong>Review performa</strong> minggu lalu — views, CTR, CR, revenue per platform. Identifikasi top performer & yang perlu dioptimasi.</div></div>
+              <div class="sop-day"><span class="sop-label">Sel</span><div><strong>Update listing</strong> — cek harga vs kompetitor, update stok, edit deskripsi/foto jika perlu.</div></div>
+              <div class="sop-day"><span class="sop-label">Rab</span><div><strong>Koordinasi</strong> dengan desain & marketing — brief aset campaign mendatang.</div></div>
+              <div class="sop-day"><span class="sop-label">Kam</span><div><strong>Setup/evaluasi iklan</strong> — adjust budget berdasarkan performa, pantau ROAS.</div></div>
+              <div class="sop-day"><span class="sop-label">Jum</span><div><strong>Submit campaign</strong> platform (flash sale, voucher weekend), siapkan konten LIVE TikTok weekend.</div></div>
+            </div>
+          </div>
+          <div class="task-block final-task">
+            <div class="task-header">🎓 Final Project — URU Ecommerce Playbook</div>
+            <p>Buat dokumen 1 halaman "URU Ecommerce Playbook" berisi: daftar keyword utama, formula judul per platform, struktur foto ideal, checklist listing baru, dan SOP mingguan. Ini akan jadi panduan kerja harian kamu sebagai E-Commerce Specialist URU.</p>
+            <label class="task-done-label"><input type="checkbox" class="task-check" data-module="m9" onchange="updateProgress()"> Final project selesai — Saya siap jadi E-Commerce Specialist! 🎉</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-nav">
+        <button class="day-btn" onclick="navigate('day2')">← Hari 2</button>
+        <button class="day-btn primary" onclick="navigate('kpi')">Lihat KPI Checklist →</button>
+      </div>
+    </section>
+
+    <!-- KPI PAGE -->
+    <section class="page" id="page-kpi">
+      <div class="page-header">
+        <div class="page-day-badge d2">KPI</div>
+        <h2 class="page-title">Checklist & Target KPI</h2>
+        <p class="page-subtitle">Self-assessment dan target performa harian sebagai E-Commerce Specialist URU</p>
+      </div>
+
+      <div class="kpi-overview">
+        <div class="kpi-stat"><div class="kpi-num">7</div><div class="kpi-lbl">Kompetensi</div></div>
+        <div class="kpi-stat"><div class="kpi-num">3</div><div class="kpi-lbl">Platform</div></div>
+        <div class="kpi-stat"><div class="kpi-num">9</div><div class="kpi-lbl">Modul</div></div>
+        <div class="kpi-stat"><div class="kpi-num" id="completedCount">0</div><div class="kpi-lbl">Selesai</div></div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-icon" style="background:#dcfce7;color:#166534">✅</div>
+          <div class="module-info">
+            <div class="module-title">7 Kompetensi Utama — Status</div>
+            <div class="module-meta">Centang setelah kamu kuasai</div>
+          </div>
+          <span class="chevron">›</span>
+        </div>
+        <div class="module-body open">
+          <div class="competency-checklist">
+            <label class="comp-check"><input type="checkbox"> <span>Bisa seleksi & kurate foto produk sesuai standar brand URU (6 jenis foto wajib)</span></label>
+            <label class="comp-check"><input type="checkbox"> <span>Memahami standar visual tiap platform (Shopee, Tokopedia, TikTok Shop)</span></label>
+            <label class="comp-check"><input type="checkbox"> <span>Mampu meningkatkan kualitas presentasi visual untuk konversi yang lebih baik</span></label>
+            <label class="comp-check"><input type="checkbox"> <span>Bisa monitor Views, CTR, Conversion Rate, dan Rating produk harian</span></label>
+            <label class="comp-check"><input type="checkbox"> <span>Mampu optimasi judul, deskripsi, keyword, dan kategori untuk SEO marketplace</span></label>
+            <label class="comp-check"><input type="checkbox"> <span>Bisa koordinasi dengan tim desain & marketing menggunakan brief yang proper</span></label>
+            <label class="comp-check"><input type="checkbox"> <span>Mampu setup flash sale, bundle, dan promo campaign di ketiga platform</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <div class="module-header" onclick="toggleModule(this)">
+          <div class="module-icon" style="background:#fce7f3;color:#9d174d">📈</div>
+          <div class="module-info">
+            <div class="module-title">Target KPI Harian URU (Benchmark)</div>
+            <div class="module-meta">Standar performa minimum sebagai specialist</div>
+          </div>
+          <span class="chevron">›</span>
+        </div>
+        <div class="module-body open">
+          <div class="kpi-table">
+            <div class="kpi-row header"><div>Metrik</div><div>Target</div><div>Jika Tidak Tercapai</div></div>
+            <div class="kpi-row"><div>Views per produk/hari</div><div><span class="target-badge green">&gt;100 organik</span></div><div>Perbaiki SEO keyword & judul</div></div>
+            <div class="kpi-row"><div>CTR</div><div><span class="target-badge blue">&gt;3%</span></div><div>Ganti foto utama, cek harga</div></div>
+            <div class="kpi-row"><div>Conversion Rate</div><div><span class="target-badge purple">&gt;1.5%</span></div><div>Perbaiki deskripsi & review</div></div>
+            <div class="kpi-row"><div>Rating toko</div><div><span class="target-badge green">&gt;4.7</span></div><div>Respons review negatif cepat</div></div>
+            <div class="kpi-row"><div>Response time chat</div><div><span class="target-badge blue">&lt;1 jam</span></div><div>Aktifkan auto-reply di semua platform</div></div>
+            <div class="kpi-row"><div>ROAS iklan</div><div><span class="target-badge purple">&gt;3x</span></div><div>Evaluasi keyword & landing visual</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-nav">
+        <button class="day-btn" onclick="navigate('day3')">← Hari 3</button>
+        <button class="day-btn primary" onclick="navigate('notes')">Catatan Saya →</button>
+      </div>
+    </section>
+
+    <!-- NOTES PAGE -->
+    <section class="page" id="page-notes">
+      <div class="page-header">
+        <div class="page-day-badge d1">📝</div>
+        <h2 class="page-title">Catatan Saya</h2>
+        <p class="page-subtitle">Tulis insight, keyword temuan, dan hal penting selama belajar</p>
+      </div>
+      <div class="notes-area">
+        <textarea id="notesInput" placeholder="Tulis catatan kamu di sini...&#10;&#10;Contoh:&#10;- Keyword terbaik URU yang saya temukan: ...&#10;- CTR produk X masih rendah karena: ...&#10;- Ide bundle URU yang bisa dicoba: ..." oninput="saveNotes()"></textarea>
+        <div class="notes-footer">
+          <span class="notes-saved" id="notesSaved"></span>
+          <button class="day-btn" onclick="clearNotes()">Hapus catatan</button>
+        </div>
+      </div>
+      <div class="day-nav">
+        <button class="day-btn" onclick="navigate('kpi')">← KPI Checklist</button>
+        <button class="day-btn primary" onclick="navigate('hero')">Kembali ke Overview →</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
